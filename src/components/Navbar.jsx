@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
 
       {/* LOGO */}
-      <div className="md:hidden lg:flex sm:px-8 lg:w-1/3 justify-center">
+      <div className="md:hidden lg:flex sm:px-8 lg:w-1/3 xl:justify-center">
         <Link
           href="/"
           className="text-sm rounded-md bg-black flex items-center justify-center p-1"
