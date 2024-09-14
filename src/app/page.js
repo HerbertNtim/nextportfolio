@@ -10,7 +10,7 @@ const Home = () => {
         Hello, 😍 I am <span className="font-black rounded-lg ring-1 ring-black p-2 bg-gradient-to-r from-[#09203F] to-[#537895] text-white">Herbert</span>!
       </h1>
 
-      <h3 className="mt-8 py-8 text-3xl">Full-Stack Developer</h3>
+      <h3 className="mt-8 py-8 text-3xl">Full-Stack Developer, based in Ghana.</h3>
 
       <p className="text-xl mt-10 text-center text-gray-800 py-2">Develop Seamless Digital Experiences with Expertise in Frontend & Backend Development.</p>
       {/* BUTTONS */}
