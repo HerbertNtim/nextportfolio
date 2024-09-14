@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="font-playfair-display">Whereas disregard and contempt for</div>
+    <div className="">Whereas disregard and contempt for</div>
   )
 }
 
