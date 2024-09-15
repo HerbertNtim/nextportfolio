@@ -1,6 +1,6 @@
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import TransitionProvider from "@/components/TransitionProvider";
 
 export const metadata = {
   title: "Ntim's Portfolio",
@@ -18,14 +18,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${playfairDisplay.variable} antialiased`}>
-        <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-100">
-          <div className="h-24">
-            <Navbar />
-          </div>
-          <div className="h-[calc(100vh-6rem)]">
-            {children}
-          </div>
-        </div>
+        <TransitionProvider>
+          {children}
+        </TransitionProvider>
       </body>
     </html>
   );
