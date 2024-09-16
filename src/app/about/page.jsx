@@ -1,18 +1,20 @@
 "use client";
 
+import ExperienceLists from "@/components/ExperienceLists";
+import { skills } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const About = () => {
   return (
     <motion.section
-      className="h-screen"
+      className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="flex">
+      <div className="h-full overflow-scroll">
         {/* TEXT */}
         <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48">
           {/* BIOGRAPHY */}
@@ -45,10 +47,82 @@ const About = () => {
           </div>
 
           {/* SKILLS */}
-          <div>SKILLS</div>
+          <div className="flex flex-col justify-center items-center gap-5">
+            <h1>SKILLS</h1>
+            <div className="flex flex-col gap-4 justify-between">
+              {skills.map((skill) => (
+                <div
+                  key={skill.title}
+                  className="flex flex-col justify-center items-center gap-4"
+                >
+                  <h2>{skill.title}</h2>
+                  <div className="flex flex-wrap items-center gap-4">
+                    {skill.items.map((item) => (
+                      <span
+                        className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
+                        key={item}
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* EXPERIENCE */}
-          <div>EXPERIENCE</div>
+          <div className="flex flex-col gap-12 justify-center pb-48">
+            <h1 className="font-black text-2xl">EXPERIENCE</h1>
+            {/* EXPERIENCE LISTS */}
+            <div className="">
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/2 mr-4 flex flex-col gap-8">
+                  <ExperienceLists
+                    title={"Software Developer Intern"}
+                    description={
+                      "Collaborated with a team of developers to build a scalable and user-friendly platform for managing customer data. Implemented RESTful APIs and integrated third-party services to enhance the platform’s functionality."
+                    }
+                    jobDate={"June 2021 - August 2021"}
+                    company={"Company Name"}
+                  />
+                  <ExperienceLists
+                    title={"Software Developer Intern"}
+                    description={
+                      "Collaborated with a team of developers to build a scalable and user-friendly platform for managing customer data. Implemented RESTful APIs and integrated third-party services to enhance the platform’s functionality."
+                    }
+                    jobDate={"June 2021 - August 2021"}
+                    company={"Company Name"}
+                  />
+                </div>
+
+                {/* CENTER */}
+                <div className="w-1/6 h-full">
+                  {/* LINE */}
+                  <div className="w-1 h-[45rem] bg-black rounded relative">
+                    {/* CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 top-0"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 top-1/2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 -bottom-0"></div>
+                  </div>
+                </div>
+
+                {/* RIGHT */}
+                <div className="w-1/2">
+                  <ExperienceLists
+                    title={"Software Developer Intern"}
+                    description={
+                      "Collaborated with a team of developers to build a scalable and user-friendly platform for managing customer data. Implemented RESTful APIs and integrated third-party services to enhance the platform’s functionality."
+                    }
+                    jobDate={"June 2021 - August 2021"}
+                    company={"Company Name"}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* SVG */}
