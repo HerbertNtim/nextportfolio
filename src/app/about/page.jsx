@@ -1,11 +1,23 @@
 "use client";
 
+import Brain from "@/components/Brain";
 import ExperienceLists from "@/components/ExperienceLists";
 import { skills } from "@/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const About = () => {
+  const containerRef = useRef();
+
+  const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const skillRef = useRef();
+  // const isSkillRefInView = useInView(skillRef, {once:true});
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+  const experienceRef = useRef();
+  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+
   return (
     <motion.section
       className="h-full"
@@ -14,9 +26,9 @@ const About = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll">
+      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT */}
-        <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48">
+        <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY */}
           <div className="flex flex-col gap-4 justify-center">
             <div className="flex gap-3 items-center justify-center">
@@ -99,9 +111,9 @@ const About = () => {
                 </div>
 
                 {/* CENTER */}
-                <div className="w-1/6 h-full">
+                <div className="w-1/6 h-full ml-10">
                   {/* LINE */}
-                  <div className="w-1 h-[45rem] bg-black rounded relative">
+                  <div className="w-1 h-[45rem] sm:h-[30rem] bg-black rounded relative">
                     {/* CIRCLE */}
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 top-0"></div>
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2 top-1/2"></div>
@@ -126,7 +138,9 @@ const About = () => {
         </div>
 
         {/* SVG */}
-        <div></div>
+        <div className="hidden lg:block lg:w-1/3 xl:w-1/2">
+          <Brain />
+        </div>
       </div>
     </motion.section>
   );
