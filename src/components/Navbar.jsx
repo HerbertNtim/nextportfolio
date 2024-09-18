@@ -115,7 +115,7 @@ const Navbar = () => {
       </div>
 
       {/* RESPONSIVE NAVIGATION */}
-      <div className="md:hidden flex">
+      <div className="md:hidden flex z-50">
         {/* BUTTON */}
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
@@ -143,11 +143,11 @@ const Navbar = () => {
             variants={linkVariant}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-4"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-6"
           >
             {links.map((link) => (
               <motion.div variants={listVariant} key={link.title}>
-                <Link href={link.href} className="text-4xl">
+                <Link href={link.href} className="text-4xl cursor-pointer">
                   {link.title}
                 </Link>
               </motion.div>

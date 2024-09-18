@@ -11,7 +11,7 @@ const Home = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col items-center py-8 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48">
+      <div className="h-full flex flex-col items-center py-8 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48" >
         {/* TITLE */}
         <h1 className="text-4xl md:text-6xl font-bold text-center">
           Hello, 😍 I am{" "}

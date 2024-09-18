@@ -17,7 +17,7 @@ const playfairDisplay = Playfair_Display({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable} antialiased`}>
+      <body className={`${playfairDisplay.variable} antialiased bg-gradient-to-b from-blue-50 to-red-100 min-h-screen`}>
         <TransitionProvider>
           {children}
         </TransitionProvider>
