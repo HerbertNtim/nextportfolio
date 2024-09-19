@@ -49,17 +49,26 @@ export const skills = [
     ],
   },
 
-  {
-    title: "Tools and Cloud",
-    items: [
-      "Git",
-      "GitHub",
-      "AWS",
-      "Jira",
-      "Trello",
-      "Slack",
-      "Zoom",
-      "Postman",
-    ],
-  },
+  // {
+  //   title: "Tools and Cloud",
+  //   items: [
+  //     "Git",
+  //     "GitHub",
+  //     "AWS",
+  //     "Jira",
+  //     "Trello",
+  //     "Slack",
+  //     "Zoom",
+  //     "Postman",
+  //   ],
+  // },
+];
+
+export const relevant_courses = [
+  'Data Structures and Algorithms',
+  'Computer Networks',
+  'Operating Systems',
+  'Database Systems',
+  'Software Engineering',
+  'Distributed Systems',
 ];

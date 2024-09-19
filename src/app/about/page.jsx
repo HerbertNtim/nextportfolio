@@ -2,7 +2,7 @@
 
 import Brain from "@/components/Brain";
 import ExperienceLists from "@/components/ExperienceLists";
-import { skills } from "@/constants";
+import { relevant_courses, skills } from "@/constants";
 import { motion, useInView, useScroll } from "framer-motion";
 import { useRef } from "react";
 
@@ -11,6 +11,8 @@ const About = () => {
 
   const { scrollYProgress } = useScroll({ container: containerRef });
 
+  const skillsRef = useRef();
+  const isSkillsInView = useInView(skillsRef, { margin: "-100px" });
 
   return (
     <motion.div
@@ -29,7 +31,22 @@ const About = () => {
             <h4 className="text-2xl font-bold text-black/90">
               Kwame Nkrumah University of Science and Technology
             </h4>
-            <p className="font-semibold">Bsc. Computer Engineering</p>
+            <p className="font-semibold text-red-900 text-lg">
+              Bsc. Computer Engineering
+            </p>
+            <div className="text-lg">
+              <p className="font-semibold mb-4">Relevant Courses:</p>
+              <div className="flex flex-wrap gap-4">
+                {relevant_courses.map((course) => (
+                  <span
+                    key={course}
+                    className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
+                  >
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </div>
 
             {/* SCROLL SVG */}
             <motion.svg
@@ -58,8 +75,11 @@ const About = () => {
           </div>
 
           {/* SKILLS */}
-          <div className="flex flex-col">
+          <div className="flex flex-col" ref={skillsRef}>
             <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillsInView ? { x: "0" } : {}}
+              transition={{ delay: 0.3 }}
               className="text-2xl font-bold"
             >
               SKILLS
@@ -75,12 +95,12 @@ const About = () => {
                 </h5>
                 <div className="flex flex-wrap gap-4 items-center">
                   {skill.items.map((item) => (
-                    <span
+                    <motion.span
                       key={item}
                       className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
                     >
                       {item}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>
