@@ -1,7 +1,7 @@
 export const skills = [
   {
     title: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "C", "C++", "SQL"],
+    items: ["C", "C++", "SQL", "JavaScript", "TypeScript", "Python"],
   },
   {
     title: "Frontend",

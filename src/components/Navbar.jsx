@@ -75,7 +75,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48">
+    <header className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48 text-xl">
       {/* LG NAV */}
       <div className="hidden md:flex justify-center items-center gap-4 w-1/3">
         {links.map((link) => (
