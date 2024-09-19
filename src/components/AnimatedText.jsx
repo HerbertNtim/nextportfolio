@@ -24,7 +24,7 @@ const singleWordVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 2,
+      duration: 2
     },
   },
 }

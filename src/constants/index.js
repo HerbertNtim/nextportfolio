@@ -50,10 +50,11 @@ export const skills = [
   },
 
   {
-    title: "Tools",
+    title: "Tools and Cloud",
     items: [
       "Git",
       "GitHub",
+      "AWS",
       "Jira",
       "Trello",
       "Slack",
