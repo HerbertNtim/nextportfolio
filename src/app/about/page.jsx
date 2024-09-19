@@ -14,6 +14,9 @@ const About = () => {
   const skillsRef = useRef();
   const isSkillsInView = useInView(skillsRef, { margin: "-100px" });
 
+  const experienceRef = useRef();
+  const isExperienceInView = useInView(experienceRef, { margin: "-100px" });
+
   return (
     <motion.div
       className="h-full"
@@ -85,7 +88,7 @@ const About = () => {
               SKILLS
             </motion.h1>
             {skills.map((skill) => (
-              <motion.div
+              <div
                 key={skill.title}
                 className="flex flex-col items-start gap-6 border-b-2 border-solid border-black pb-4"
               >
@@ -103,7 +106,7 @@ const About = () => {
                     </motion.span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
 
             {/* SCROLL SVG */}
@@ -133,13 +136,22 @@ const About = () => {
           </div>
 
           {/* EXPERIENCE */}
-          <div className="flex flex-col">
-            <h1 className="text-2xl font-bold p-2">EXPERIENCE</h1>
+          <div ref={experienceRef} className="flex flex-col">
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isExperienceInView ? { x: "0" } : {}}
+              transition={{ delay: 0.3 }}
+              className="text-2xl font-bold p-2"
+            >
+              EXPERIENCE
+            </motion.h1>
             <div className="relative sm:mx-auto my-4">
               <div className="hidden sm:block absolute left-0 top-0 w-[4px] h-full bg-black origin-top" />
               <div className="hidden sm:block w-5 h-5 rounded-full absolute top-0 -left-2 bg-red-500" />
               <div className="hidden sm:block w-5 h-5 rounded-full absolute top-1/2 -left-2 bg-red-500" />
-              <div className="flex flex-col sm:ml-8 gap-12">
+              <div
+                className="flex flex-col sm:ml-8 gap-12"
+              >
                 <ExperienceLists
                   title="frontend developer"
                   company="MT Lab KNUST"
