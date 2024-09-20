@@ -72,3 +72,14 @@ export const relevant_courses = [
   'Software Engineering',
   'Distributed Systems',
 ];
+
+export const projects = [
+  {
+    image: '/netview.png',
+    title: "NetFlix clone called NetView",
+    description: '',
+    demoLink: '',
+    github: "",
+    techStack: ["", '']
+  }
+]
