@@ -49,19 +49,19 @@ export const skills = [
     ],
   },
 
-  // {
-  //   title: "Tools and Cloud",
-  //   items: [
-  //     "Git",
-  //     "GitHub",
-  //     "AWS",
-  //     "Jira",
-  //     "Trello",
-  //     "Slack",
-  //     "Zoom",
-  //     "Postman",
-  //   ],
-  // },
+  {
+    title: "Tools and Cloud",
+    items: [
+      "Git",
+      "GitHub",
+      "AWS",
+      "Jira",
+      "Trello",
+      "Slack",
+      "Zoom",
+      "Postman",
+    ],
+  },
 ];
 
 export const relevant_courses = [
