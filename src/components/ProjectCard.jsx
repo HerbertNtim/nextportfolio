@@ -17,9 +17,9 @@ const ProjectCard = ({
       {/* Project image */}
       <Link href={demoLink} className="flex-shrink-0">
         <Image
-          src={image || "/bg.png"}
+          src={image}
           alt={title}
-          className="rounded-xl object-contain"
+          className="rounded-xl object-contain bg-slate-200"
           width={250}
           height={250}
         />
@@ -29,7 +29,10 @@ const ProjectCard = ({
       <div className="sm:w-2/3 flex flex-col items-start justify-center pl-6">
         <div className="mb-4 flex flex-wrap gap-2">
           {techStack.map((stack, index) => (
-            <span className="text-sm font-medium text-gray-800 p-2 rounded bg-slate-200"  key={index}>
+            <span
+              className="text-sm font-medium text-gray-800 p-2 rounded bg-slate-200"
+              key={index}
+            >
               {stack}
             </span>
           ))}

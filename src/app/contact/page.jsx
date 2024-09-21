@@ -40,9 +40,9 @@ const Contact = () => {
         {/* FORMS CONTAINER */}
         <form className="h-1/2 lg:h-full lg:w-1/2 rounded-xl bg-red-50 flex flex-col gap-8 p-24 justify-center">
           <span>Dear Herbert Ntim,</span>
-          <textarea rows={6} className="bg-transparent border-b-2 border-b-black outline-none resize-none pb-16 mb-16b" placeholder="Your Message Here" required></textarea>
+          <textarea rows={6} className="bg-transparent border-b-2 border-b-black outline-none resize-none pb-16 mb-16b" placeholder="Your Message Here" required name="user_message"></textarea>
           <span>My Email is:</span>
-          <input type="email" placeholder="Email Here" required className="bg-transparent border-b-2 border-b-black outline-none p-2"/>
+          <input type="email" placeholder="Email Here" required className="bg-transparent border-b-2 border-b-black outline-none p-2" name="user_email"/>
           <span>Regards:</span>
           <button className="bg-purple-200 text-gray-500 p-2 rounded font-semibold">Send</button>
           {success && <span className="text-green-600 text-lg">Your message is sent</span>}

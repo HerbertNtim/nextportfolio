@@ -29,13 +29,13 @@ const About = () => {
         {/* TEXT CONTAINER */}
         <div className="flex flex-col p-4 sm:p-8 md:p-12 lg:p-24 xl:p-48 gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* EDUCATION */}
-          <div className="flex flex-col justify-center gap-8">
-            <h1 className="text-2xl font-bold">EDUCATION</h1>
-            <h4 className="text-2xl font-bold text-black/90">
+          <div className="flex flex-col justify-center gap-2">
+            <h1 className="text-4xl font-black">EDUCATION</h1>
+            <h4 className="text-2xl font-extrabold text-black/90">
               Kwame Nkrumah University of Science and Technology
             </h4>
             <p className="font-semibold text-red-900 text-lg">
-              Bsc. Computer Engineering
+              Bsc. Computer Engineering <span className="italic text-sm ml-4">August, 2020 - November, 2024 (waiting for graduation)</span>
             </p>
             <div className="text-lg">
               <p className="font-semibold mb-4">Relevant Courses:</p>

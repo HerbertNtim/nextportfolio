@@ -3,19 +3,9 @@
 import AnimatedText from "@/components/AnimatedText";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/constants";
-import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["stat end", "center start"],
-  });
-
-  console.log(projects.image);
-
   return (
     <motion.section
       className="h-full overflow-y-scroll"

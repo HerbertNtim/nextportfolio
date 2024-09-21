@@ -75,7 +75,7 @@ export const relevant_courses = [
 
 export const projects = [
   {
-    image: "/netview.png",
+    image: "/jsm-logo.png",
     title: "NetFlix clone called NetView",
     description:
       "Inventory: Personal Project- Backend Application              View Demo | Code					  Developed a full-stack inventory management application using React and Next.js for the frontend, Redux for state management and styled with MUI, TailwindCSS, and visualized data with Recharts.Implemented backend with Node. Developed a Netflix clone",
