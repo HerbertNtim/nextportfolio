@@ -65,21 +65,52 @@ export const skills = [
 ];
 
 export const relevant_courses = [
-  'Data Structures and Algorithms',
-  'Computer Networks',
-  'Operating Systems',
-  'Database Systems',
-  'Software Engineering',
-  'Distributed Systems',
+  "Data Structures and Algorithms",
+  "Computer Networks",
+  "Operating Systems",
+  "Database Systems",
+  "Software Engineering",
+  "Distributed Systems",
 ];
 
 export const projects = [
   {
-    image: '/netview.png',
+    image: "/netview.png",
     title: "NetFlix clone called NetView",
-    description: '',
-    demoLink: '',
-    github: "",
-    techStack: ["", '']
-  }
-]
+    description:
+      "Inventory: Personal Project- Backend Application              View Demo | Code					  Developed a full-stack inventory management application using React and Next.js for the frontend, Redux for state management and styled with MUI, TailwindCSS, and visualized data with Recharts.Implemented backend with Node. Developed a Netflix clone",
+    demoLink: "demo",
+    github: "github",
+    techStack: ["NodeJS", "Express", "MongoDB", "ReactJS", "Zustand"],
+  },
+
+  {
+    image: "/netview.png",
+    title: " NetView",
+    description:
+      "Inventory: Personal Project- Backend Application              View Demo | Code					  Developed a full-stack inventory management application using React and Next.js for the frontend, Redux for state management and styled with MUI, TailwindCSS, and visualized data with Recharts.Implemented backend with Node. Developed a Netflix clone",
+    demoLink: "demo",
+    github: "github",
+    techStack: ["NodeJS", "Express", "MongoDB", "ReactJS", "Zustand"],
+  },
+
+  {
+    image: "/netview.png",
+    title: "NetFlix clone ",
+    description:
+      "Inventory: Personal Project- Backend Application              View Demo | Code					  Developed a full-stack inventory management application using React and Next.js for the frontend, Redux for state management and styled with MUI, TailwindCSS, and visualized data with Recharts.Implemented backend with Node. Developed a Netflix clone",
+    demoLink: "demo",
+    github: "github",
+    techStack: ["NodeJS", "Express", "MongoDB", "ReactJS", "Zustand"],
+  },
+
+  {
+    image: "/netview.png",
+    title: "clone called NetView",
+    description:
+      "Inventory: Personal Project- Backend Application              View Demo | Code					  Developed a full-stack inventory management application using React and Next.js for the frontend, Redux for state management and styled with MUI, TailwindCSS, and visualized data with Recharts.Implemented backend with Node. Developed a Netflix clone",
+    demoLink: "demo",
+    github: "github",
+    techStack: ["NodeJS", "Express", "MongoDB", "ReactJS", "Zustand"],
+  },
+];

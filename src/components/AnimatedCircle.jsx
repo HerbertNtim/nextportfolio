@@ -18,7 +18,7 @@ const AnimatedCircle = ({reference}) => {
           cx="75"
           cy="50"
           r="20"
-          className="stroke-[5px] fill-slate-50"
+          className="stroke-[5px] fill-black/55"
           style={{
             pathLength: scrollYProgress
           }}
